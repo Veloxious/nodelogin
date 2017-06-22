@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    {{^loginTry}}
+    <h1>Login</h1>
+    <form class="login" action="/login" method="post">
+      <input type="text" name="usrName" value="" placeholder="username">
+      <input type="password" name="usrPass" value="" placeholder="password">
+      <input type="submit" name="subBut" value="Login">
+    </form>
+    {{/loginTry}}
+    {{#loginTry}}
+      <h1>Login Success!</h1>
+      <h3>Welcome {{loginUsr}}
+    {{/loginTry}}
+  </body>
+  <script type="text/javascript" src="../main.js">
+
+  </script>
+</html>
